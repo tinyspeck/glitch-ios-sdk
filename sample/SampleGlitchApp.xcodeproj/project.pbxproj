@@ -1,0 +1,398 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23201C1C14105138003E71A7 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23201C1A14105138003E71A7 /* MainWindow.xib */; };
+		23201C1D14105138003E71A7 /* SampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 23201C1B14105138003E71A7 /* SampleViewController.xib */; };
+		237A883A140D60A8004D6BA6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 237A8839140D60A8004D6BA6 /* UIKit.framework */; };
+		237A883C140D60A8004D6BA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 237A883B140D60A8004D6BA6 /* Foundation.framework */; };
+		237A883E140D60A8004D6BA6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 237A883D140D60A8004D6BA6 /* CoreGraphics.framework */; };
+		23AF3948141038520045A2B4 /* VAG.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23AF3947141038520045A2B4 /* VAG.ttf */; };
+		23AF394B141038590045A2B4 /* groddle.png in Resources */ = {isa = PBXBuildFile; fileRef = 23AF3949141038590045A2B4 /* groddle.png */; };
+		23AF394C141038590045A2B4 /* groddle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 23AF394A141038590045A2B4 /* groddle@2x.png */; };
+		23AF395A141038CA0045A2B4 /* SampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AF3957141038CA0045A2B4 /* SampleAppDelegate.m */; };
+		23AF395B141038CA0045A2B4 /* SampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AF3959141038CA0045A2B4 /* SampleViewController.m */; };
+		23AF399C14103AA70045A2B4 /* GCRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AF399914103AA70045A2B4 /* GCRequest.m */; };
+		23AF399D14103AA70045A2B4 /* Glitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AF399B14103AA70045A2B4 /* Glitch.m */; };
+		23AF3A02141048EE0045A2B4 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AF39EA141048EE0045A2B4 /* NSObject+SBJson.m */; };
+		23AF3A03141048EE0045A2B4 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AF39ED141048EE0045A2B4 /* SBJsonParser.m */; };
+		23AF3A04141048EE0045A2B4 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AF39EF141048EE0045A2B4 /* SBJsonStreamParser.m */; };
+		23AF3A05141048EE0045A2B4 /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AF39F1141048EE0045A2B4 /* SBJsonStreamParserAccumulator.m */; };
+		23AF3A06141048EE0045A2B4 /* SBJsonStreamParserAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AF39F3141048EE0045A2B4 /* SBJsonStreamParserAdapter.m */; };
+		23AF3A07141048EE0045A2B4 /* SBJsonStreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AF39F5141048EE0045A2B4 /* SBJsonStreamParserState.m */; };
+		23AF3A08141048EE0045A2B4 /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AF39F7141048EE0045A2B4 /* SBJsonStreamWriter.m */; };
+		23AF3A09141048EE0045A2B4 /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AF39F9141048EE0045A2B4 /* SBJsonStreamWriterAccumulator.m */; };
+		23AF3A0A141048EE0045A2B4 /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AF39FB141048EE0045A2B4 /* SBJsonStreamWriterState.m */; };
+		23AF3A0B141048EE0045A2B4 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AF39FD141048EE0045A2B4 /* SBJsonTokeniser.m */; };
+		23AF3A0C141048EE0045A2B4 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AF39FF141048EE0045A2B4 /* SBJsonUTF8Stream.m */; };
+		23AF3A0D141048EE0045A2B4 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AF3A01141048EE0045A2B4 /* SBJsonWriter.m */; };
+		23AF3A1C14104E350045A2B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AF3A1B14104E350045A2B4 /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		23201C1A14105138003E71A7 /* MainWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindow.xib; sourceTree = SOURCE_ROOT; };
+		23201C1B14105138003E71A7 /* SampleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SampleViewController.xib; sourceTree = SOURCE_ROOT; };
+		237A8835140D60A8004D6BA6 /* SampleGlitchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleGlitchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		237A8839140D60A8004D6BA6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		237A883B140D60A8004D6BA6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		237A883D140D60A8004D6BA6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		237A8841140D60A8004D6BA6 /* SampleGlitchApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SampleGlitchApp-Info.plist"; sourceTree = "<group>"; };
+		237A8847140D60A8004D6BA6 /* SampleGlitchApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SampleGlitchApp-Prefix.pch"; sourceTree = "<group>"; };
+		23AF3947141038520045A2B4 /* VAG.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = VAG.ttf; path = Resources/Fonts/VAG.ttf; sourceTree = SOURCE_ROOT; };
+		23AF3949141038590045A2B4 /* groddle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = groddle.png; path = Resources/Images/groddle.png; sourceTree = SOURCE_ROOT; };
+		23AF394A141038590045A2B4 /* groddle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "groddle@2x.png"; path = "Resources/Images/groddle@2x.png"; sourceTree = SOURCE_ROOT; };
+		23AF3956141038CA0045A2B4 /* SampleAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; name = SampleAppDelegate.h; path = Classes/SampleAppDelegate.h; sourceTree = SOURCE_ROOT; };
+		23AF3957141038CA0045A2B4 /* SampleAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleAppDelegate.m; path = Classes/SampleAppDelegate.m; sourceTree = SOURCE_ROOT; };
+		23AF3958141038CA0045A2B4 /* SampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; name = SampleViewController.h; path = Classes/SampleViewController.h; sourceTree = SOURCE_ROOT; };
+		23AF3959141038CA0045A2B4 /* SampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleViewController.m; path = Classes/SampleViewController.m; sourceTree = SOURCE_ROOT; };
+		23AF399814103AA70045A2B4 /* GCRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCRequest.h; path = ../sdk/GCRequest.h; sourceTree = SOURCE_ROOT; };
+		23AF399914103AA70045A2B4 /* GCRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCRequest.m; path = ../sdk/GCRequest.m; sourceTree = SOURCE_ROOT; };
+		23AF399A14103AA70045A2B4 /* Glitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Glitch.h; path = ../sdk/Glitch.h; sourceTree = SOURCE_ROOT; };
+		23AF399B14103AA70045A2B4 /* Glitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Glitch.m; path = ../sdk/Glitch.m; sourceTree = SOURCE_ROOT; };
+		23AF39E9141048EE0045A2B4 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+SBJson.h"; path = "../sdk/JSON/NSObject+SBJson.h"; sourceTree = SOURCE_ROOT; };
+		23AF39EA141048EE0045A2B4 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+SBJson.m"; path = "../sdk/JSON/NSObject+SBJson.m"; sourceTree = SOURCE_ROOT; };
+		23AF39EB141048EE0045A2B4 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJson.h; path = ../sdk/JSON/SBJson.h; sourceTree = SOURCE_ROOT; };
+		23AF39EC141048EE0045A2B4 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonParser.h; path = ../sdk/JSON/SBJsonParser.h; sourceTree = SOURCE_ROOT; };
+		23AF39ED141048EE0045A2B4 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonParser.m; path = ../sdk/JSON/SBJsonParser.m; sourceTree = SOURCE_ROOT; };
+		23AF39EE141048EE0045A2B4 /* SBJsonStreamParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonStreamParser.h; path = ../sdk/JSON/SBJsonStreamParser.h; sourceTree = SOURCE_ROOT; };
+		23AF39EF141048EE0045A2B4 /* SBJsonStreamParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonStreamParser.m; path = ../sdk/JSON/SBJsonStreamParser.m; sourceTree = SOURCE_ROOT; };
+		23AF39F0141048EE0045A2B4 /* SBJsonStreamParserAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonStreamParserAccumulator.h; path = ../sdk/JSON/SBJsonStreamParserAccumulator.h; sourceTree = SOURCE_ROOT; };
+		23AF39F1141048EE0045A2B4 /* SBJsonStreamParserAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonStreamParserAccumulator.m; path = ../sdk/JSON/SBJsonStreamParserAccumulator.m; sourceTree = SOURCE_ROOT; };
+		23AF39F2141048EE0045A2B4 /* SBJsonStreamParserAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonStreamParserAdapter.h; path = ../sdk/JSON/SBJsonStreamParserAdapter.h; sourceTree = SOURCE_ROOT; };
+		23AF39F3141048EE0045A2B4 /* SBJsonStreamParserAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonStreamParserAdapter.m; path = ../sdk/JSON/SBJsonStreamParserAdapter.m; sourceTree = SOURCE_ROOT; };
+		23AF39F4141048EE0045A2B4 /* SBJsonStreamParserState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonStreamParserState.h; path = ../sdk/JSON/SBJsonStreamParserState.h; sourceTree = SOURCE_ROOT; };
+		23AF39F5141048EE0045A2B4 /* SBJsonStreamParserState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonStreamParserState.m; path = ../sdk/JSON/SBJsonStreamParserState.m; sourceTree = SOURCE_ROOT; };
+		23AF39F6141048EE0045A2B4 /* SBJsonStreamWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonStreamWriter.h; path = ../sdk/JSON/SBJsonStreamWriter.h; sourceTree = SOURCE_ROOT; };
+		23AF39F7141048EE0045A2B4 /* SBJsonStreamWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonStreamWriter.m; path = ../sdk/JSON/SBJsonStreamWriter.m; sourceTree = SOURCE_ROOT; };
+		23AF39F8141048EE0045A2B4 /* SBJsonStreamWriterAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonStreamWriterAccumulator.h; path = ../sdk/JSON/SBJsonStreamWriterAccumulator.h; sourceTree = SOURCE_ROOT; };
+		23AF39F9141048EE0045A2B4 /* SBJsonStreamWriterAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonStreamWriterAccumulator.m; path = ../sdk/JSON/SBJsonStreamWriterAccumulator.m; sourceTree = SOURCE_ROOT; };
+		23AF39FA141048EE0045A2B4 /* SBJsonStreamWriterState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonStreamWriterState.h; path = ../sdk/JSON/SBJsonStreamWriterState.h; sourceTree = SOURCE_ROOT; };
+		23AF39FB141048EE0045A2B4 /* SBJsonStreamWriterState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonStreamWriterState.m; path = ../sdk/JSON/SBJsonStreamWriterState.m; sourceTree = SOURCE_ROOT; };
+		23AF39FC141048EE0045A2B4 /* SBJsonTokeniser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonTokeniser.h; path = ../sdk/JSON/SBJsonTokeniser.h; sourceTree = SOURCE_ROOT; };
+		23AF39FD141048EE0045A2B4 /* SBJsonTokeniser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonTokeniser.m; path = ../sdk/JSON/SBJsonTokeniser.m; sourceTree = SOURCE_ROOT; };
+		23AF39FE141048EE0045A2B4 /* SBJsonUTF8Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonUTF8Stream.h; path = ../sdk/JSON/SBJsonUTF8Stream.h; sourceTree = SOURCE_ROOT; };
+		23AF39FF141048EE0045A2B4 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonUTF8Stream.m; path = ../sdk/JSON/SBJsonUTF8Stream.m; sourceTree = SOURCE_ROOT; };
+		23AF3A00141048EE0045A2B4 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SBJsonWriter.h; path = ../sdk/JSON/SBJsonWriter.h; sourceTree = SOURCE_ROOT; };
+		23AF3A01141048EE0045A2B4 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SBJsonWriter.m; path = ../sdk/JSON/SBJsonWriter.m; sourceTree = SOURCE_ROOT; };
+		23AF3A1B14104E350045A2B4 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		237A8832140D60A8004D6BA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				237A883A140D60A8004D6BA6 /* UIKit.framework in Frameworks */,
+				237A883C140D60A8004D6BA6 /* Foundation.framework in Frameworks */,
+				237A883E140D60A8004D6BA6 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		237A882A140D60A8004D6BA6 = {
+			isa = PBXGroup;
+			children = (
+				237A8859140D60C8004D6BA6 /* Glitch iOS SDK */,
+				237A883F140D60A8004D6BA6 /* SampleGlitchApp */,
+				237A8838140D60A8004D6BA6 /* Frameworks */,
+				237A8836140D60A8004D6BA6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		237A8836140D60A8004D6BA6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				237A8835140D60A8004D6BA6 /* SampleGlitchApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		237A8838140D60A8004D6BA6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				237A8839140D60A8004D6BA6 /* UIKit.framework */,
+				237A883B140D60A8004D6BA6 /* Foundation.framework */,
+				237A883D140D60A8004D6BA6 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		237A883F140D60A8004D6BA6 /* SampleGlitchApp */ = {
+			isa = PBXGroup;
+			children = (
+				23AF3956141038CA0045A2B4 /* SampleAppDelegate.h */,
+				23AF3957141038CA0045A2B4 /* SampleAppDelegate.m */,
+				23AF3958141038CA0045A2B4 /* SampleViewController.h */,
+				23AF3959141038CA0045A2B4 /* SampleViewController.m */,
+				237A8840140D60A8004D6BA6 /* Supporting Files */,
+			);
+			name = SampleGlitchApp;
+			path = SampleGame;
+			sourceTree = "<group>";
+		};
+		237A8840140D60A8004D6BA6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				23AF390C14100CED0045A2B4 /* Interface Builder */,
+				23AF390B14100CE20045A2B4 /* Images */,
+				23AF390A14100CDE0045A2B4 /* Fonts */,
+				237A8847140D60A8004D6BA6 /* SampleGlitchApp-Prefix.pch */,
+				23AF3A1B14104E350045A2B4 /* main.m */,
+				237A8841140D60A8004D6BA6 /* SampleGlitchApp-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		237A8859140D60C8004D6BA6 /* Glitch iOS SDK */ = {
+			isa = PBXGroup;
+			children = (
+				23AF399814103AA70045A2B4 /* GCRequest.h */,
+				23AF399914103AA70045A2B4 /* GCRequest.m */,
+				23AF399A14103AA70045A2B4 /* Glitch.h */,
+				23AF399B14103AA70045A2B4 /* Glitch.m */,
+				23AF390D141036950045A2B4 /* JSON */,
+			);
+			name = "Glitch iOS SDK";
+			path = SampleGame;
+			sourceTree = "<group>";
+		};
+		23AF390A14100CDE0045A2B4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				23AF3947141038520045A2B4 /* VAG.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		23AF390B14100CE20045A2B4 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				23AF3949141038590045A2B4 /* groddle.png */,
+				23AF394A141038590045A2B4 /* groddle@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		23AF390C14100CED0045A2B4 /* Interface Builder */ = {
+			isa = PBXGroup;
+			children = (
+				23201C1A14105138003E71A7 /* MainWindow.xib */,
+				23201C1B14105138003E71A7 /* SampleViewController.xib */,
+			);
+			name = "Interface Builder";
+			sourceTree = "<group>";
+		};
+		23AF390D141036950045A2B4 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				23AF39E9141048EE0045A2B4 /* NSObject+SBJson.h */,
+				23AF39EA141048EE0045A2B4 /* NSObject+SBJson.m */,
+				23AF39EB141048EE0045A2B4 /* SBJson.h */,
+				23AF39EC141048EE0045A2B4 /* SBJsonParser.h */,
+				23AF39ED141048EE0045A2B4 /* SBJsonParser.m */,
+				23AF39EE141048EE0045A2B4 /* SBJsonStreamParser.h */,
+				23AF39EF141048EE0045A2B4 /* SBJsonStreamParser.m */,
+				23AF39F0141048EE0045A2B4 /* SBJsonStreamParserAccumulator.h */,
+				23AF39F1141048EE0045A2B4 /* SBJsonStreamParserAccumulator.m */,
+				23AF39F2141048EE0045A2B4 /* SBJsonStreamParserAdapter.h */,
+				23AF39F3141048EE0045A2B4 /* SBJsonStreamParserAdapter.m */,
+				23AF39F4141048EE0045A2B4 /* SBJsonStreamParserState.h */,
+				23AF39F5141048EE0045A2B4 /* SBJsonStreamParserState.m */,
+				23AF39F6141048EE0045A2B4 /* SBJsonStreamWriter.h */,
+				23AF39F7141048EE0045A2B4 /* SBJsonStreamWriter.m */,
+				23AF39F8141048EE0045A2B4 /* SBJsonStreamWriterAccumulator.h */,
+				23AF39F9141048EE0045A2B4 /* SBJsonStreamWriterAccumulator.m */,
+				23AF39FA141048EE0045A2B4 /* SBJsonStreamWriterState.h */,
+				23AF39FB141048EE0045A2B4 /* SBJsonStreamWriterState.m */,
+				23AF39FC141048EE0045A2B4 /* SBJsonTokeniser.h */,
+				23AF39FD141048EE0045A2B4 /* SBJsonTokeniser.m */,
+				23AF39FE141048EE0045A2B4 /* SBJsonUTF8Stream.h */,
+				23AF39FF141048EE0045A2B4 /* SBJsonUTF8Stream.m */,
+				23AF3A00141048EE0045A2B4 /* SBJsonWriter.h */,
+				23AF3A01141048EE0045A2B4 /* SBJsonWriter.m */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		237A8834140D60A8004D6BA6 /* SampleGlitchApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 237A8856140D60A8004D6BA6 /* Build configuration list for PBXNativeTarget "SampleGlitchApp" */;
+			buildPhases = (
+				23AF3955141038BF0045A2B4 /* Sources */,
+				237A8832140D60A8004D6BA6 /* Frameworks */,
+				237A8833140D60A8004D6BA6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SampleGlitchApp;
+			productName = SampleGame;
+			productReference = 237A8835140D60A8004D6BA6 /* SampleGlitchApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		237A882C140D60A8004D6BA6 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 237A882F140D60A8004D6BA6 /* Build configuration list for PBXProject "SampleGlitchApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 237A882A140D60A8004D6BA6;
+			productRefGroup = 237A8836140D60A8004D6BA6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				237A8834140D60A8004D6BA6 /* SampleGlitchApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		237A8833140D60A8004D6BA6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23AF3948141038520045A2B4 /* VAG.ttf in Resources */,
+				23AF394B141038590045A2B4 /* groddle.png in Resources */,
+				23AF394C141038590045A2B4 /* groddle@2x.png in Resources */,
+				23201C1C14105138003E71A7 /* MainWindow.xib in Resources */,
+				23201C1D14105138003E71A7 /* SampleViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		23AF3955141038BF0045A2B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23AF395A141038CA0045A2B4 /* SampleAppDelegate.m in Sources */,
+				23AF395B141038CA0045A2B4 /* SampleViewController.m in Sources */,
+				23AF399C14103AA70045A2B4 /* GCRequest.m in Sources */,
+				23AF399D14103AA70045A2B4 /* Glitch.m in Sources */,
+				23AF3A02141048EE0045A2B4 /* NSObject+SBJson.m in Sources */,
+				23AF3A03141048EE0045A2B4 /* SBJsonParser.m in Sources */,
+				23AF3A04141048EE0045A2B4 /* SBJsonStreamParser.m in Sources */,
+				23AF3A05141048EE0045A2B4 /* SBJsonStreamParserAccumulator.m in Sources */,
+				23AF3A06141048EE0045A2B4 /* SBJsonStreamParserAdapter.m in Sources */,
+				23AF3A07141048EE0045A2B4 /* SBJsonStreamParserState.m in Sources */,
+				23AF3A08141048EE0045A2B4 /* SBJsonStreamWriter.m in Sources */,
+				23AF3A09141048EE0045A2B4 /* SBJsonStreamWriterAccumulator.m in Sources */,
+				23AF3A0A141048EE0045A2B4 /* SBJsonStreamWriterState.m in Sources */,
+				23AF3A0B141048EE0045A2B4 /* SBJsonTokeniser.m in Sources */,
+				23AF3A0C141048EE0045A2B4 /* SBJsonUTF8Stream.m in Sources */,
+				23AF3A0D141048EE0045A2B4 /* SBJsonWriter.m in Sources */,
+				23AF3A1C14104E350045A2B4 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		237A8854140D60A8004D6BA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		237A8855140D60A8004D6BA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		237A8857140D60A8004D6BA6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SampleGlitchApp-Prefix.pch";
+				INFOPLIST_FILE = "SampleGlitchApp-Info.plist";
+				PRODUCT_NAME = SampleGlitchApp;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		237A8858140D60A8004D6BA6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SampleGlitchApp-Prefix.pch";
+				INFOPLIST_FILE = "SampleGlitchApp-Info.plist";
+				PRODUCT_NAME = SampleGlitchApp;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		237A882F140D60A8004D6BA6 /* Build configuration list for PBXProject "SampleGlitchApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				237A8854140D60A8004D6BA6 /* Debug */,
+				237A8855140D60A8004D6BA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		237A8856140D60A8004D6BA6 /* Build configuration list for PBXNativeTarget "SampleGlitchApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				237A8857140D60A8004D6BA6 /* Debug */,
+				237A8858140D60A8004D6BA6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 237A882C140D60A8004D6BA6 /* Project object */;
+}
