@@ -18,31 +18,36 @@
 
 @interface Glitch : NSObject {
     NSString * _accessToken;
-    NSString * _clientId;
     id<GCSessionDelegate> _sessionDelegate;
 }
 
 
 @property (nonatomic, copy) NSString * accessToken;
-@property (nonatomic, copy) NSString * clientId;
 @property (nonatomic, assign) id<GCSessionDelegate> sessionDelegate;
 
 
 #pragma mark - Initialization
 
-- (id)initWithDelegate:(id<GCSessionDelegate>)delegate andAPIKey:(NSString*)apiKey;
+- (id)initWithDelegate:(id<GCSessionDelegate>)delegate;
 
 
 #pragma mark - Authorization with Glitch
 
-- (void)authorize;
+- (void)authorizeWithScope:(NSString*)scope; // Pass in "identity", "read", or "write" as scope. See Glitch API docs for more info about OAuth scopes!
+- (void)authorizeWithScope:(NSString*)scope andState:(NSString*)state;
 - (void)handleOpenURL:(NSURL *)url;
+- (void)logout;
+
+
+#pragma mark - Utility
+
+- (void)saveAccessTokenToDisk;
 
 
 #pragma mark - Interacting with the API
 
-- (GCRequest*)requestWithPath:(NSString*)path delegate:(id<GCRequestDelegate>)delegate params:(NSDictionary*)params;
-- (GCRequest*)requestWithPath:(NSString*)path delegate:(id<GCRequestDelegate>)delegate;
+- (GCRequest*)requestWithMethod:(NSString*)method delegate:(id<GCRequestDelegate>)delegate params:(NSDictionary*)params;
+- (GCRequest*)requestWithMethod:(NSString*)method delegate:(id<GCRequestDelegate>)delegate;
 
 
 @end

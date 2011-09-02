@@ -23,7 +23,7 @@
 - (void)requestFinished:(GCRequest*)request withResult:(id)result
 {
     // Validate we've got the right response
-    if ([request.path isEqualToString:@"players.info"])
+    if ([request.method isEqualToString:@"players.info"])
     {
         // Perform validation on the response
         if ([result isKindOfClass:[NSDictionary class]])
@@ -77,7 +77,7 @@
     // Now let's load up our character image.
     
     // Call API to get basic player information
-    GCRequest * request = [_glitch requestWithPath:@"players.info" delegate:self];
+    GCRequest * request = [_glitch requestWithMethod:@"players.info" delegate:self];
     [request connect];
 }
 
@@ -96,14 +96,14 @@
 
 -(void)viewDidAppear:(BOOL)animated
 {
-    [_glitch authorize];
+    [_glitch authorizeWithScope:@"identity"];
 }
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad
 {
-    _glitch = [[Glitch alloc] initWithDelegate:self andAPIKey:@"84-9c7dec5325d7f12807928cde70c41d2c0aab3878"];
+    _glitch = [[Glitch alloc] initWithDelegate:self];
     
     [super viewDidLoad];
 }

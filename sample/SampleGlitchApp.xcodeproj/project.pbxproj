@@ -43,12 +43,13 @@
 		237A883D140D60A8004D6BA6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		237A8841140D60A8004D6BA6 /* SampleGlitchApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SampleGlitchApp-Info.plist"; sourceTree = "<group>"; };
 		237A8847140D60A8004D6BA6 /* SampleGlitchApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SampleGlitchApp-Prefix.pch"; sourceTree = "<group>"; };
+		2399647A14114CE500827492 /* GlitchConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlitchConfig.h; path = ../sdk/GlitchConfig.h; sourceTree = SOURCE_ROOT; };
 		23AF3947141038520045A2B4 /* VAG.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = VAG.ttf; path = Resources/Fonts/VAG.ttf; sourceTree = SOURCE_ROOT; };
 		23AF3949141038590045A2B4 /* groddle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = groddle.png; path = Resources/Images/groddle.png; sourceTree = SOURCE_ROOT; };
 		23AF394A141038590045A2B4 /* groddle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "groddle@2x.png"; path = "Resources/Images/groddle@2x.png"; sourceTree = SOURCE_ROOT; };
-		23AF3956141038CA0045A2B4 /* SampleAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; name = SampleAppDelegate.h; path = Classes/SampleAppDelegate.h; sourceTree = SOURCE_ROOT; };
+		23AF3956141038CA0045A2B4 /* SampleAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleAppDelegate.h; path = Classes/SampleAppDelegate.h; sourceTree = SOURCE_ROOT; };
 		23AF3957141038CA0045A2B4 /* SampleAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleAppDelegate.m; path = Classes/SampleAppDelegate.m; sourceTree = SOURCE_ROOT; };
-		23AF3958141038CA0045A2B4 /* SampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; name = SampleViewController.h; path = Classes/SampleViewController.h; sourceTree = SOURCE_ROOT; };
+		23AF3958141038CA0045A2B4 /* SampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleViewController.h; path = Classes/SampleViewController.h; sourceTree = SOURCE_ROOT; };
 		23AF3959141038CA0045A2B4 /* SampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SampleViewController.m; path = Classes/SampleViewController.m; sourceTree = SOURCE_ROOT; };
 		23AF399814103AA70045A2B4 /* GCRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GCRequest.h; path = ../sdk/GCRequest.h; sourceTree = SOURCE_ROOT; };
 		23AF399914103AA70045A2B4 /* GCRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GCRequest.m; path = ../sdk/GCRequest.m; sourceTree = SOURCE_ROOT; };
@@ -157,6 +158,7 @@
 				23AF399914103AA70045A2B4 /* GCRequest.m */,
 				23AF399A14103AA70045A2B4 /* Glitch.h */,
 				23AF399B14103AA70045A2B4 /* Glitch.m */,
+				2399647A14114CE500827492 /* GlitchConfig.h */,
 				23AF390D141036950045A2B4 /* JSON */,
 			);
 			name = "Glitch iOS SDK";
@@ -322,7 +324,7 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
-				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
@@ -339,7 +341,7 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
-				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;

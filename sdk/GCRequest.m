@@ -13,16 +13,16 @@
 #import "SBJson.h"
 
 
-static NSString * kGCUserAgent = @"glitch-ios-sdk";
-static NSString * kGCAPIUrlPrefix = @"http://api.glitch.com/simple/";
-static const NSTimeInterval kGCTimeout = 120;
+static NSString * const GCUserAgent = @"glitch-ios-sdk";
+static NSString * const GCAPIUrlPrefix = @"http://api.glitch.com/simple/";
+static NSTimeInterval const GCTimeout = 120;
 
 
 @implementation GCRequest
 
 
 @synthesize url = _url,
-                path = _path,
+                method = _method,
                 params = _params,
                 requestDelegate = _requestDelegate,
                 connection = _connection,
@@ -33,16 +33,16 @@ static const NSTimeInterval kGCTimeout = 120;
 
 // Do not call this directly - call Glitch, which will call this lower-level method
 //
-// Get a GCRequest object with a specificed method path,
+// Get a GCRequest object with a specificed method,
 // delegate to call when request/response events occur,
 // and any parameters passed in for the request.
-+ (GCRequest *)requestWithPath:(NSString*)path
++ (GCRequest *)requestWithMethod:(NSString*)method
                        delegate:(id<GCRequestDelegate>)delegate
                        params:(NSDictionary*)params
 {
     GCRequest * request = [[[GCRequest alloc] init] autorelease];
-    request.path = path;
-    request.url = [NSString stringWithFormat:@"%@%@",kGCAPIUrlPrefix,path];
+    request.method = method;
+    request.url = [NSString stringWithFormat:@"%@%@",GCAPIUrlPrefix,method];
     request.params = params;
     request.requestDelegate = delegate;
     
@@ -60,9 +60,9 @@ static const NSTimeInterval kGCTimeout = 120;
     NSString * url = _params != nil ? [GCRequest serializeURL:_url params:_params] : _url;
     
     // Create the request that we're going to send
-    NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:kGCTimeout];
+    NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url] cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:GCTimeout];
     [request setHTTPMethod:@"GET"];
-    [request setValue:kGCUserAgent forHTTPHeaderField:@"User-Agent"]; // Set our user agent so the server knows that we're calling from the iOS SDK
+    [request setValue:GCUserAgent forHTTPHeaderField:@"User-Agent"]; // Set our user agent so the server knows that we're calling from the iOS SDK
     
     // Initialize and start the connection
     _connection = [[NSURLConnection alloc] initWithRequest:request delegate:self startImmediately:YES];
