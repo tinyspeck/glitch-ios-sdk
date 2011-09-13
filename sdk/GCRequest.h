@@ -4,7 +4,19 @@
  *  Copyright 2011 Tiny Speck, Inc.
  *  Created by Brady Archambo.
  *
- *  http://www.glitch.com
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License. 
+ *
+ *  See more about Glitch at http://www.glitch.com
  *  http://www.tinyspeck.com
  */
 
@@ -22,6 +34,7 @@
     id<GCRequestDelegate> _requestDelegate; // Delegate that will be called when events occur before, during, and after the request
     NSURLConnection * _connection; // Connection object - this is held on to until the request completes
     NSMutableData * _receivedResponseData; // Response data, filled up as information is received from the server
+    NSDictionary * _additionalData; // Optional additional data dictionary, can be used to store whatever you want that relates to a particular request
 }
 
 
@@ -31,6 +44,7 @@
 @property (nonatomic, assign) id<GCRequestDelegate> requestDelegate;
 @property (nonatomic, assign) NSURLConnection * connection;
 @property (nonatomic, assign) NSMutableData * receivedResponseData;
+@property (nonatomic, copy) NSDictionary * additionalData;
 
 
 #pragma mark - Initialization
@@ -42,7 +56,8 @@
 // and any parameters passed in for the request.
 + (GCRequest *)requestWithMethod:(NSString*)method
                      delegate:(id<GCRequestDelegate>)delegate
-                       params:(NSDictionary*)params;
+                       params:(NSDictionary*)params
+                         additionalData:(NSDictionary*)additionalData;
 
 
 #pragma mark - Interacting with the API

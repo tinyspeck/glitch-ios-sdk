@@ -12,7 +12,7 @@
 		237A883A140D60A8004D6BA6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 237A8839140D60A8004D6BA6 /* UIKit.framework */; };
 		237A883C140D60A8004D6BA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 237A883B140D60A8004D6BA6 /* Foundation.framework */; };
 		237A883E140D60A8004D6BA6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 237A883D140D60A8004D6BA6 /* CoreGraphics.framework */; };
-		23AF3948141038520045A2B4 /* VAG.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23AF3947141038520045A2B4 /* VAG.ttf */; };
+		23AF3948141038520045A2B4 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 23AF3947141038520045A2B4 /* OpenSans-Bold.ttf */; };
 		23AF394B141038590045A2B4 /* groddle.png in Resources */ = {isa = PBXBuildFile; fileRef = 23AF3949141038590045A2B4 /* groddle.png */; };
 		23AF394C141038590045A2B4 /* groddle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 23AF394A141038590045A2B4 /* groddle@2x.png */; };
 		23AF395A141038CA0045A2B4 /* SampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 23AF3957141038CA0045A2B4 /* SampleAppDelegate.m */; };
@@ -44,7 +44,7 @@
 		237A8841140D60A8004D6BA6 /* SampleGlitchApp-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SampleGlitchApp-Info.plist"; sourceTree = "<group>"; };
 		237A8847140D60A8004D6BA6 /* SampleGlitchApp-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SampleGlitchApp-Prefix.pch"; sourceTree = "<group>"; };
 		2399647A14114CE500827492 /* GlitchConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GlitchConfig.h; path = ../sdk/GlitchConfig.h; sourceTree = SOURCE_ROOT; };
-		23AF3947141038520045A2B4 /* VAG.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = VAG.ttf; path = Resources/Fonts/VAG.ttf; sourceTree = SOURCE_ROOT; };
+		23AF3947141038520045A2B4 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = OpenSans-Bold.ttf; path = Resources/Fonts/OpenSans-Bold.ttf; sourceTree = SOURCE_ROOT; };
 		23AF3949141038590045A2B4 /* groddle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = groddle.png; path = Resources/Images/groddle.png; sourceTree = SOURCE_ROOT; };
 		23AF394A141038590045A2B4 /* groddle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "groddle@2x.png"; path = "Resources/Images/groddle@2x.png"; sourceTree = SOURCE_ROOT; };
 		23AF3956141038CA0045A2B4 /* SampleAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SampleAppDelegate.h; path = Classes/SampleAppDelegate.h; sourceTree = SOURCE_ROOT; };
@@ -168,7 +168,7 @@
 		23AF390A14100CDE0045A2B4 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				23AF3947141038520045A2B4 /* VAG.ttf */,
+				23AF3947141038520045A2B4 /* OpenSans-Bold.ttf */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
@@ -270,7 +270,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23AF3948141038520045A2B4 /* VAG.ttf in Resources */,
+				23AF3948141038520045A2B4 /* OpenSans-Bold.ttf in Resources */,
 				23AF394B141038590045A2B4 /* groddle.png in Resources */,
 				23AF394C141038590045A2B4 /* groddle@2x.png in Resources */,
 				23201C1C14105138003E71A7 /* MainWindow.xib in Resources */,

@@ -4,7 +4,19 @@
  *  Copyright 2011 Tiny Speck, Inc.
  *  Created by Brady Archambo.
  *
- *  http://www.glitch.com
+ *  Licensed under the Apache License, Version 2.0 (the "License");
+ *  you may not use this file except in compliance with the License.
+ *  You may obtain a copy of the License at
+ *
+ *  http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *  Unless required by applicable law or agreed to in writing, software
+ *  distributed under the License is distributed on an "AS IS" BASIS,
+ *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ *  See the License for the specific language governing permissions and
+ *  limitations under the License. 
+ *
+ *  See more about Glitch at http://www.glitch.com
  *  http://www.tinyspeck.com
  */
 
@@ -55,6 +67,9 @@ NSString * AccessTokenSavePath() {
 // The auth server includes this value when redirecting the user-agent back to the client.
 - (void)authorizeWithScope:(NSString*)scope andState:(NSString*)state
 {
+    // Set scope to identity if we don't have it
+    NSString * serviceScope = scope ? scope : @"identity";
+    
     // Check for saved token
     NSString * savedToken = [NSKeyedUnarchiver unarchiveObjectWithFile:AccessTokenSavePath()];
     
@@ -63,16 +78,16 @@ NSString * AccessTokenSavePath() {
         // Using saved token
         _accessToken = [savedToken copy];
         
-        if ([_sessionDelegate respondsToSelector:@selector(glitchLoginSuccess)])
-        {
-            [_sessionDelegate glitchLoginSuccess];
-        }
+        // Call auth.check to validate token before proceeding
+        GCRequest * request = [self requestWithMethod:@"auth.check" delegate:self];
+        
+        // Add scope and (optionally) state to the additional data dictionary so that we can reauthorize later with these parameters if auth.check fails for any reason
+        request.additionalData = state ? [NSDictionary dictionaryWithObjectsAndKeys:scope, @"scope", state, @"state", nil] : [NSDictionary dictionaryWithObject:scope forKey:@"scope"];
+        
+        [request connect];
         
         return;
     }
-    
-    // Set scope to identity if we don't have it
-    NSString * serviceScope = scope ? scope : @"identity";
     
     NSMutableDictionary * params = [NSMutableDictionary dictionaryWithObjectsAndKeys:
                              GCAPIKey,@"client_id",
@@ -117,9 +132,9 @@ NSString * AccessTokenSavePath() {
         else
         {
             // Throw ERROR!
-            if ([_sessionDelegate respondsToSelector:@selector(glitchLoginFail)])
+            if ([_sessionDelegate respondsToSelector:@selector(glitchLoginFail:)])
             {
-                [_sessionDelegate glitchLoginFail];
+                [_sessionDelegate glitchLoginFail:nil];
             }
         }
     }
@@ -148,7 +163,7 @@ NSString * AccessTokenSavePath() {
 
 #pragma mark - Interacting with the API
 
-- (GCRequest*)requestWithMethod:(NSString*)method delegate:(id<GCRequestDelegate>)delegate params:(NSDictionary*)params
+- (GCRequest*)requestWithMethod:(NSString*)method delegate:(id<GCRequestDelegate>)delegate params:(NSDictionary*)params additionalData:(NSDictionary*)additionalData
 {
     NSMutableDictionary * requestParams = [NSMutableDictionary dictionaryWithObject:_accessToken forKey:@"oauth_token"];
     
@@ -157,7 +172,13 @@ NSString * AccessTokenSavePath() {
         [requestParams addEntriesFromDictionary:params];
     }
     
-    return [GCRequest requestWithMethod:method delegate:delegate params:requestParams];
+    return [GCRequest requestWithMethod:method delegate:delegate params:requestParams additionalData:additionalData];
+}
+
+
+- (GCRequest*)requestWithMethod:(NSString*)method delegate:(id<GCRequestDelegate>)delegate params:(NSDictionary*)params
+{
+    return [self requestWithMethod:method delegate:delegate params:params additionalData:nil];
 }
 
 
@@ -165,6 +186,64 @@ NSString * AccessTokenSavePath() {
 {
     return [self requestWithMethod:method delegate:delegate params:nil];
 }
+
+
+#pragma mark - Glitch Request Delegate Methods for Checking Auth Token
+
+// Called when request was completed
+- (void)requestFinished:(GCRequest*)request withResult:(id)result
+{
+    // Validate we've got the right response
+    if ([request.method isEqualToString:@"auth.check"])
+    {
+        // Perform validation on the response
+        if ([result isKindOfClass:[NSDictionary class]])
+        {
+            // Get the status of the auth token
+            id ok = [(NSDictionary*)result objectForKey:@"ok"];
+            
+            // Ensure that we're ok! (the number is 1)
+            if (ok && [ok isKindOfClass:[NSNumber class]] && [(NSNumber*)ok boolValue])
+            {
+                if ([_sessionDelegate respondsToSelector:@selector(glitchLoginSuccess)])
+                {
+                    [_sessionDelegate glitchLoginSuccess];
+                }
+                
+                return;
+            }
+        }
+    }
+    
+    // Otherwise remove old auth key re-auth
+    [self reauth:request.additionalData];
+}
+
+
+// Called when request fails
+- (void)requestFailed:(GCRequest*)request withError:(NSError*)error
+{
+    // Remove old key and reauth
+    [self reauth:request.additionalData];
+}
+
+
+// Reauthorize with additional data
+- (void)reauth:(NSDictionary*)additionalData
+{
+    if (additionalData)
+    {
+        // Remove old auth key re-auth
+        _accessToken = nil;
+        [[NSFileManager defaultManager] removeItemAtPath:AccessTokenSavePath() error:nil];
+        
+        id scope = [additionalData objectForKey:@"scope"];
+        id state = [additionalData objectForKey:@"state"];
+        
+        [self authorizeWithScope:scope andState:state];
+    }
+}
+
 
 
 @end
