@@ -31,6 +31,7 @@
 @interface Glitch : NSObject <GCRequestDelegate> {
     NSString * _accessToken;
     id<GCSessionDelegate> _sessionDelegate;
+    BOOL _authenticating;
 }
 
 
@@ -49,6 +50,7 @@
 - (void)authorizeWithScope:(NSString*)scope andState:(NSString*)state;
 - (void)handleOpenURL:(NSURL*)url;
 - (void)logout;
+- (BOOL)isAuthenticated;
 
 
 #pragma mark - Utility
