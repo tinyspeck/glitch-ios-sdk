@@ -176,6 +176,9 @@ static NSTimeInterval const GCTimeout = 120;
             [_requestDelegate requestFinished:self withResult:result];
         }
     }
+    
+    [_connection release], _connection = nil;
+	[_receivedResponseData release], _receivedResponseData = nil;
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
@@ -187,6 +190,16 @@ static NSTimeInterval const GCTimeout = 120;
     
 	[_connection release], _connection = nil;
 	[_receivedResponseData release], _receivedResponseData = nil;
+}
+
+
+- (void)dealloc {
+    [_url release], _url = nil;
+    [_method release], _method = nil;
+    [_params release], _params = nil;
+    [_additionalData release], _additionalData = nil;
+    
+    [super dealloc];
 }
 
 
